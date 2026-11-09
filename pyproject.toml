@@ -1,0 +1,32 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "eeg_seizure_cls"
+version = "0.0.1"
+description = "Exploring time-series and time-series derivative approaches to EEG seizure recognition."
+authors = [
+  { name = "Jesse" },
+]
+license = { file = "LICENSE" }
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License"
+]
+requires-python = "~=3.11.0"
+
+
+[tool.ruff]
+line-length = 99
+src = ["eeg_seizure_cls"]
+include = ["pyproject.toml", "eeg_seizure_cls/**/*.py"]
+
+[tool.ruff.lint]
+extend-select = ["I"]  # Add import sorting
+
+[tool.ruff.lint.isort]
+known-first-party = ["eeg_seizure_cls"]
+force-sort-within-sections = true
+

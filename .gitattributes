@@ -1,0 +1,5 @@
+# GitHub: collapse notebook diffs by default
+*.ipynb linguist-generated=true
+
+# Local: show only the code when diffing a notebook
+*.ipynb diff=ipynb
